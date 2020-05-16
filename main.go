@@ -1,10 +1,8 @@
 package main
 
-import (
-	"log"
-)
+import "github.com/gavinc95/go-blog/db"
 
 func main() {
-	server := srv.NewHTTPServer()
-	log.Fatal(server.ListenAndServe())
+	app := NewApp(":8010", &db.GenID{})
+	app.Run()
 }
