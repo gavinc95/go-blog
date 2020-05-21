@@ -114,6 +114,14 @@ type GetPostResponse struct {
 	Post *models.Post `json:"post"`
 }
 
+type GetAllPostsRequest struct {
+	UserID string `json:"user_id"` // required
+}
+
+type GetAllPostsResponse struct {
+	Posts []*models.Post `json:"posts"`
+}
+
 type DeletePostRequest struct {
 	ID string `json:"id"` // required
 }
